@@ -147,6 +147,14 @@
           data-motionno="0">
             <img src="img/ch17/004.png">
           </section>
+          <section data-auto-animate
+          data-no="6" 
+          data-positionx="0.8" 
+          data-positiony="0.03" 
+          data-scale="1" 
+          data-motionno="0">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sFQbdFFm9JI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
       </section>
       <section>
         <section data-auto-animate
@@ -156,9 +164,16 @@
           data-scale="1" 
           data-motionno="0">
           <h3>hints</h3>
+          <p style="font-size: 24px; text-align: left; font-weight: bold;">Keyword: 有向無環圖(DAG)</p>
           <pre><code data-trim data-noescape>
             #include &lt;stdio.h&gt;
             int main(){
+              int n;  // 共有n個task
+              for(int i = 0; i &lt; n; i++){
+                // 輸入第i個task所需時間、完成該task之後才能做後面k個task、後面k個task的編號
+                // 每連結一個節點就計算到此節點完成時間的最大值
+                // 或是將所有節點連接完畢後，每遇到終點就往回計算時間
+              }
               return 0;
             }
           </code></pre> 
@@ -246,6 +261,14 @@
           data-motionno="0">
             <img src="img/ch17/008.png">
           </section>
+          <section data-auto-animate
+          data-no="6" 
+          data-positionx="0.8" 
+          data-positiony="0.03" 
+          data-scale="1" 
+          data-motionno="0">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XTEe-qa6BBo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
       </section>
       <section>
         <section data-auto-animate
@@ -262,7 +285,30 @@
             後序(Postorder)：左子節點、右子節點、根節點<br>
             層序(Level-order)：由根節點一層層往下，由左往右。
           </p>
-        </section>   
+        </section> 
+        <section data-auto-animate
+          data-no="17" 
+          data-positionx="0.8" 
+          data-positiony="0.03" 
+          data-scale="1" 
+          data-motionno="0">
+          <pre><code data-trim data-noescape>
+            (pseudocode)
+
+            buildTree( ){
+              index: 找出前/後序的某字元在中序的哪個位置
+              if該子樹不存在:
+                return NULL;
+              else:
+                data = index指到的字;
+                左指標指向 buildTree(左子樹);
+                右指標指向 buildTree(右子樹);
+                return 根;
+
+            }
+          </code></pre>
+        </section>
+
       </section>
       <section>
         <section data-auto-animate
